@@ -1,2 +1,4 @@
-const a: string = '1'
-console.log(a, '??')
+const calc = (a: number, b: number): number => {
+    return a + b
+}
+export default calc

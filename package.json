@@ -1,12 +1,22 @@
 {
   "name": "front-end-enginering",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
-  "main": "index.js",
+  "main": "dest/index.js",
+  "types": "dest/types/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsc --watch",
+    "build": "pnpm run clean && tsc",
+    "clean": "rm -rf dist"
   },
+  "publishConfig": {
+    "access": "public"
+},
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  }
 }

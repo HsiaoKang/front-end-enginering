@@ -15,6 +15,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 16
+      - run: npm install pnpm -g
       - run: pnpm install
       - run: pnpm run lint
   tests:
@@ -25,5 +26,6 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 16
+      - run: npm install pnpm -g
       - run: pnpm install
       - run: pnpm run test
